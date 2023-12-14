@@ -1,14 +1,16 @@
-let saveEL = document.getElementById("save-el");
-let countEL = document.getElementById("count-el");
+let countEl = document.getElementById("count-el");
 let count = 0;
+countEl.textContent = count;
+let entries = document.getElementById("entries-el");
+entries.textContent = "Previous Entries: ";
+
 function increment() {
   count += 1;
-  countEL.textContent = count;
+  countEl.textContent = count;
 }
 
 function save() {
-  let countStr = count + " - ";
-  saveEL.textContent += countStr;
+  entries.textContent += count + " - ";
   count = 0;
-  countEL.textContent = count;
+  countEl.textContent = count;
 }
